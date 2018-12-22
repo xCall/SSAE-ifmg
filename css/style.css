@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*Arquivo css com as configuracoes extras da pagina de login de usuario*/
+
+
+html, body {
+  height: 100%;
+}
+body{
+    background: url("/img/landingpage_1440x720px_assistenciaestudantil.jpg")no-repeat center center fixed;
+    background-size: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background: url("/img/mobile_919x533px_assistenciaestudantil.jpg")no-repeat center center fixed;
+        background-size: cover;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
