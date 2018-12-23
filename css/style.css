@@ -5,6 +5,7 @@
 html, body {
   height: 100%;
 }
+/* Background Desktop */
 body{
     background: url("/img/landingpage_1440x720px_assistenciaestudantil.jpg")no-repeat center center fixed;
     background-size: cover;
@@ -13,8 +14,33 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
 }
+/*Configuracoes do card do cartao no Desktop*/
+/*Cabecalho do cartao*/
+.card-header {
+    background-color: rgb(25,82,41);
+    color: white;
+    font-weight: bolder;
+}
+/*Configuracoes de margin do cartao*/
+.margin-top-card {
+    margin-top: 40%;
+}
+/*Botao enviar do cartao*/
+.card-btn-enviar {
+    background-color: #DCDCDC!important;
+}
+/*Links de apoio ao usuario*/
+.link {
+    color: black;
+    font-size: 0.75em;
+}
+/*Configuracoes da landingpage*/
+.logo {
+
+}
 
 @media only screen and (max-width: 768px) {
+    /*Background Mobile*/
     body {
         background: url("/img/mobile_919x533px_assistenciaestudantil.jpg")no-repeat center center fixed;
         background-size: cover;
@@ -22,5 +48,10 @@ body{
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
+    }
+    /*Margin para posicionamento do cartao no Mobile*/
+    .margin-top-card {
+        margin-top: 20%;
+        margin-bottom: 10%;
     }
 }
