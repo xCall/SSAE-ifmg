@@ -1,0 +1,250 @@
+/* CSS para estilizar elementos do template de login */
+
+body.login {
+    background: url("/img/landingpage_1440x720px_assistenciaestudantil.jpg")no-repeat center center fixed;
+    background-size: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+body.login h1 {
+    background-image: url("/static/comum/img/logo-login.dbf45bf6e477.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100px;
+    margin: 20px 0;
+    text-indent: -9000px;
+    width: 100%;
+}
+body.login h3 {
+    color: #999;
+    font-weight: 300;
+}
+body.login #content {
+    background-color: #333;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15vh auto 15px;
+    width: 40%;
+}
+    body.login.debug #content {
+        background-color: #c0392b;
+    }
+body.login #content.hasServicos {
+    width: 80%;
+}
+body.login #content form {
+    margin: 50px 0 0;
+}
+body.login .errorlist,
+body.login .messagelist {
+    margin: 10px 0 0;
+    padding: 0 !important;
+}
+body.login .errornote,
+body.login .msg {
+    left: 0;
+    width: 100%;
+}
+body.login .form-row {
+    margin: 0 0 10px;
+}
+body.login .form-row a {
+    display: inline-block;
+    padding: 10px 0 0;
+    width: 100%;
+}
+body.login .form-row input[type="password"],
+body.login .form-row input[type="text"] {
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 120%;
+    height: 46px;
+    max-width: 100%;
+    padding: 0 5px;
+    width: 100%;
+}
+body.login label.required {
+    cursor: default;
+    font-weight: 300 !important;
+}
+body.login label.required:after {
+    content: "";
+}
+body.login .form-row input[type="password"]:active,
+body.login .form-row input[type="password"]:focus,
+body.login .form-row input[type="text"]:active,
+body.login .form-row input[type="text"]:focus {
+    border: 2px solid #5bb75b;
+}
+body.login .form-row label {
+    clear: left;
+    color: #666666 !important;
+    font-weight: normal !important;
+    line-height: 1em;
+    padding: 0 5px 0 0;
+    text-align: left !important;
+}
+body.login .login-footer {
+    margin: 50px auto 20px;
+    overflow: hidden;
+    width: 30%;
+}
+body.login #content.hasServicos + .login-footer {
+    margin-top: 5px;
+    width: 80%;
+}
+body.login .login-footer p {
+    color: #ddd;
+    font-weight: 300;
+    text-align: center;
+}
+body.login #content.hasServicos + .login-footer p {
+    text-align: right;
+}
+body.login .login-footer p a {
+    color: #5bb75b;
+}
+body.login .login-form {
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    float: left;
+    margin: -30px 0 -30px 3%;
+    padding: 60px;
+    position: relative;
+    width: 94%;
+}
+body.login #content.hasServicos .login-form {
+    width: 50%;
+}
+body.login .login-services {
+    float: right;
+    padding: 30px 40px 40px 40px;
+    width: 47%;
+}
+body.login .login-services h3 {
+    border: 0 none;
+    color: #aaa;
+    font-size: 200%;
+    margin-bottom: 10px;
+}
+body.login .login-services ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+body.login .login-services li {
+    border-radius: 5px;
+    color: #666;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100px;
+    list-style: none;
+    margin: 5px;
+    text-align: center;
+}
+body.login .login-services li a {
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 5px;
+    display: block;
+    font-size: 110%;
+    font-weight: 300;
+    height: 100%;
+    line-height: 1.2em;
+    padding: 15px;
+}
+body.login .login-services li a strong {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+body.login .login-services li:hover {
+    background-color: #555;
+}
+body.login .login-services li a:hover {
+    text-decoration: none;
+}
+body.login .login-services ul {
+    padding: 0;
+}
+body.login ul.login-services  {
+    padding: 0;
+    width: 100%;
+}
+body.login .login-services .fa {
+    clear: both;
+    color: #aaa;
+    display: block;
+    font-size: 180%;
+    margin-bottom: 15px;
+}
+body.login .submit-row input[type="submit"] {
+    font-size: 120%;
+    height: 45px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1300px) {
+    body.login #content.hasServicos {
+        width: 70%;
+    }
+    body.login #content.hasServicos + .login-footer {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 1700px) {
+    body.login #content:not(.hasServicos) {
+        width: 30%;
+    }
+    body.login #content.hasServicos {
+        width: 60%;
+    }
+    body.login #content.hasServicos + .login-footer {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    body.login #content:not(.hasServicos) {
+        width: 50%;
+    }
+    body.login #content.hasServicos {
+        width: 90%;
+    }
+    body.login #content.hasServicos + .login-footer {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 800px) {
+    body.login h1 {
+        background-size: contain;
+    }
+    body.login #content:not(.hasServicos) {
+        margin-top: 80px;
+        width: 60%;
+    }
+    body.login .login-form {
+        flex-basis: 94%;
+    }
+    body.login .login-services {
+        flex-basis: 100%;
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width: 700px) {
+    body.login #content:not(.hasServicos) {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 500px) {
+    body.login #content:not(.hasServicos) {
+        width: 90%;
+    }
+}

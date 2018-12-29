@@ -1,57 +1,181 @@
 @charset "UTF-8";
 /*Arquivo css com as configuracoes extras da pagina de login de usuario*/
-
-
-html, body {
-  height: 100%;
-}
-/* Background Desktop */
-body{
-    background: url("/img/landingpage_1440x720px_assistenciaestudantil.jpg")no-repeat center center fixed;
+body {
+    background: url("img/landingpage_1440x720px_assistenciaestudantil.jpg")no-repeat center center fixed;
     background-size: cover;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-/*Configuracoes do card do cartao no Desktop*/
-/*Cabecalho do cartao*/
-.card-header {
-    background-color: rgb(25,82,41);
+body.login .btn-entrar {
+    background-color: #CCD3E6;
+    border: none;
+    border-radius: 20px;
+    font-size: 120%;
+    height: 45px;
+    width: 100%;
+    cursor: pointer;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.form-login {
+   float: left;
+   width: 50%;
+   background-color: #fff;
+   padding: 0% 5% 5% 5%;
+   border-bottom-left-radius: 5px;
+   clear: both;
+   position: absolute;
+   left: 0;
+   margin-left: 15px;
+   display: block;
+   height: 90%;
+
+}
+div.acesso {
+   width: 50%;
+   padding-top: 0;
+   
+}
+/*.btn-magic {
+    margin-top:auto;
+    top:0;
+    position: absolute;
+    margin-right: 2%;
+    background-color: #0F4F5B;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 10%;
+    padding: 2% 0 2% 0;
+}
+i {
+    font-size: 180%;
+}*/
+div.pai {
+    clear: both;
+    margin-top: 3%;
+    display: block;
+}
+input {
+    margin-bottom: 6px;
+    margin-top: 5%;
+}
+input:focus {
+    border: 2px solid #32AB7D!important; 
+    box-shadow: 0 0 0 0.2rem rgba(25,82,41,0.25)!important;
+}
+ul li {
+    border: 1px solid #CED4DA;
+    border-radius: 2px;
+    list-style: none;
+    text-align: center;
+    margin-right: 16%;
+    padding: 5px 4px 5px 4px;
+    background-color: #32AC7D;
+    margin-bottom: 7px;
+}
+ul li:hover {
+    background-color: rgb(52, 202, 145);
+    border: 1px solid white!important; 
+    box-shadow: 0 0 0 0.2rem rgba(25,82,41,0.25)!important;
+}
+ul li a:focus {
+   
+}
+ul li i {
+    font-size: 160%;
+}
+ul li a {
+    text-decoration: none;
+    color: #CED4DA;
+    display: block;
+    width: 100%;
+}
+ul li a:hover {
+    text-decoration: none;
     color: white;
-    font-weight: bolder;
 }
-/*Configuracoes de margin do cartao*/
-.margin-top-card {
-    margin-top: 40%;
+/*div.suporte {
+    float: right;
+    margin-top:auto;
+    top:0;
+    position: absolute;
+    margin-left: 45%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 40%;
+    padding: 2% 0 2% 0;
+}*/
+div.suporte {
+    background-color: #DBE5E6;
+    width: 41%;
+    float: right;
+    margin-right: 7%;
+    height: 90%;
+    border-bottom-right-radius: 5px;
 }
-/*Botao enviar do cartao*/
-.card-btn-enviar {
-    background-color: #DCDCDC!important;
+.titulo {
+    background-color: rgb(15,79,91);   
+    width: 93%;
+    padding: 5px 0 2px 0;
+    margin-bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    left: 0;
+    margin: 0;
 }
-/*Links de apoio ao usuario*/
-.link {
-    color: black;
-    font-size: 0.75em;
+h5 {
+    font-family: 'Hoftype', Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: #33AC7E;
+    font-weight:;
+    text-align: center;
+    padding-top: 2%;
 }
-/*Configuracoes da landingpage*/
-.logo {
-
+img {
+    width: 100%;
 }
-
 @media only screen and (max-width: 768px) {
     /*Background Mobile*/
     body {
-        background: url("/img/mobile_919x533px_assistenciaestudantil.jpg")no-repeat center center fixed;
+        background: url("img/mobile_919x533px_assistenciaestudantil.jpg")no-repeat center center fixed;
         background-size: cover;
         background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
     }
-    /*Margin para posicionamento do cartao no Mobile*/
-    .margin-top-card {
-        margin-top: 20%;
-        margin-bottom: 10%;
+    div.pai{
+        margin-top: 10%;
     }
+    div.form-login {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        margin: 0%;
+        float: none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+    }
+    div.suporte {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        margin: 0%;
+        float: none;
+        margin-bottom: 10%;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    div.titulo {
+        width: 100%;
+        position: relative;
+        margin: 0%;
+        background-color: transparent;
+        margin-bottom: 10px;
+    }  
 }

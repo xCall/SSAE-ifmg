@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <!--Meta-->
     <meta charset="UTF-8">
@@ -8,68 +9,89 @@
     <!--Compatibilidade-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Titulo da pagina-->
-    <title>Document</title>
+    <title>Login - SSAE/IFMG</title>
     <!--CSS Reset-->
-    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <!--<link rel="stylesheet" href="css/bootstrap-reboot.css">-->
     <!--Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!--Style Proprietario-->
     <link rel="stylesheet" href="css/style.css">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
 </head>
-<body>
-    <div class="container">
+
+<body class="login">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
-                <img class="img-fluid logo" src="img/chamada_landingpage_assistenciaestudantil.png" alt="Logo Assistência Estudantil">
+            <div class="col-md-6">
+
             </div>
-            <div class="col-md-4">
-                
-            </div>
-            <div class="col-md-4">
-                <div class="card margin-top-card">
-                    <div class="card-header">
-                        Acesso ao SSAE/IFMG                      
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <!--Campo do Cpf-->
-                            <div class="form-group">
-                                <label for="cpf" class="">CPF:</label>
-                                <input type="text" name="cpf" value="" maxlength="14" onkeypress="this.value = formataCpf(event)" onpaste="return false;" id="cpfEntrada" class="form-control">
-                            </div>
-                            <!--/Campo do Cpf-->
-                            <!--Capo da Senha-->
-                            <div class="form-group">
-                                <label for="" class="">Senha:</label>
-                                <input type="password" name="senha" value="" class="form-control">
-                            </div>
-                            <!--/Capo da Senha-->
-                            <!--Campo do botao enviar-->
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-light card-btn-enviar">Entrar</button>
-                            </div>
-                            <!--/Campo do botao enviar-->
-                            <div class="form-group">
-                                <a href="#" class="link"><i class="far fa-question-circle"></i> Esqueceu a senha?</a><br>
-                                <a href="#" class="link"><i class="fas fa-user-plus"></i> É aluno e não possui cadastro?</a><br>
-                                <a href="#" class="link"><i class="fas fa-paper-plane"></i> Reenviar link para ativação de cadastro</a><br>
-                                <a href="#" class="link"><i class="fas fa-book"></i> Manual do Aluno</a>
-                            </div>
-                        </form>
-                    </div>
+            <div class="col-md-6 pai">
+                <div class="titulo">
+                    <img src="img/chamada_landingpage_assistenciaestudantil.png" alt="" class="">
                 </div>
+                <div class="form-login">
+                    <div class="acesso">
+                        <h4>Acesso ao SSAE/IFMG</h4>
+                    </div>
+                    <form action="" class="form-entrada" method="post">
+                        <div class="form-group">
+                            <label for="cpf">CPF:</label>
+                            <input type="text" id="cpf" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" class="form-control" required>
+                        </div>
+                        <div>
+                            <input type="submit" class="btn-entrar" value="Entrar">
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="suporte">
+                    <div class="titulo-2">
+                        <h5><i class="fas fa-exclamation-circle"></i><strong>Ajuda</strong></h5>
+                    </div>
+                    <ul>
+                        <li><a href="#" class="link"><i class="far fa-question-circle"></i><br> <strong>Esqueceu</strong>
+                                a senha?</a></li>
+                        <li><a href="#" class="link"><i class="fas fa-user-plus"></i><br> É <strong>aluno</strong> e
+                                não possui cadastro?</a></li>
+                        <li><a href="#" class="link"><i class="fas fa-paper-plane"></i><br> <strong>Reenviar</strong>
+                                link para ativação de
+                                cadastro</a></li>
+                        <li><a href="#" class="link"><i class="fas fa-book"></i><br> <strong>Manual</strong> do Aluno</a></li>
+                    </ul>
+                </div>
+
+                <!--
+                <button class="btn btn-magic dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-exclamation-circle"></i>
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>-->
             </div>
         </div>
     </div>
+
     <!--Script para o Bootstrap-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <!--Script proprietario-->
     <script src="js/script.js"></script>
+    <!--<img src="img/LAYOUT_mobile_919x533px_assistenciaestudantil.jpg" alt="">-->
 </body>
+
 </html>
