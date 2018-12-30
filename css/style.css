@@ -16,6 +16,8 @@ body.login .btn-entrar {
     height: 45px;
     width: 100%;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
 }
 label{
     font-family: Arial, Helvetica, sans-serif;
@@ -31,7 +33,7 @@ div.form-login {
    left: 0;
    margin-left: 15px;
    display: block;
-   height: 90%;
+   height: 85%;
 
 }
 div.acesso {
@@ -39,20 +41,6 @@ div.acesso {
    padding-top: 0;
    
 }
-/*.btn-magic {
-    margin-top:auto;
-    top:0;
-    position: absolute;
-    margin-right: 2%;
-    background-color: #0F4F5B;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    width: 10%;
-    padding: 2% 0 2% 0;
-}
-i {
-    font-size: 180%;
-}*/
 div.pai {
     clear: both;
     margin-top: 3%;
@@ -71,18 +59,17 @@ ul li {
     border-radius: 2px;
     list-style: none;
     text-align: center;
-    margin-right: 16%;
     padding: 5px 4px 5px 4px;
     background-color: #32AC7D;
     margin-bottom: 7px;
-}
+    width: 80%;
+    margin-right: 6%;
+    margin-left: 2%;
+} 
 ul li:hover {
     background-color: rgb(52, 202, 145);
     border: 1px solid white!important; 
     box-shadow: 0 0 0 0.2rem rgba(25,82,41,0.25)!important;
-}
-ul li a:focus {
-   
 }
 ul li i {
     font-size: 160%;
@@ -92,29 +79,20 @@ ul li a {
     color: #CED4DA;
     display: block;
     width: 100%;
+    font-size: 15px;
 }
 ul li a:hover {
     text-decoration: none;
     color: white;
 }
-/*div.suporte {
-    float: right;
-    margin-top:auto;
-    top:0;
-    position: absolute;
-    margin-left: 45%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    width: 40%;
-    padding: 2% 0 2% 0;
-}*/
 div.suporte {
     background-color: #DBE5E6;
     width: 41%;
     float: right;
     margin-right: 7%;
-    height: 90%;
+    height: 85%;
     border-bottom-right-radius: 5px;
+    vertical-align: middle;
 }
 .titulo {
     background-color: rgb(15,79,91);   
@@ -126,6 +104,10 @@ div.suporte {
     position: relative;
     left: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
 }
 h5 {
     font-family: 'Hoftype', Arial, Helvetica, sans-serif;
@@ -134,6 +116,23 @@ h5 {
     font-weight:;
     text-align: center;
     padding-top: 2%;
+    margin-bottom: 10px;
+}
+div.acesso {
+    margin-top: 8%;
+    margin-left: 20%;
+}
+div.acesso span {
+    margin-left: 20%;
+}
+h4 {
+    font-size: 150%!important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    text-align: center;
+    text-justify: auto;
+    color: #32AC7D;
 }
 img {
     width: 100%;
@@ -153,7 +152,7 @@ img {
     }
     div.form-login {
         width: 100%;
-        height: 50%;
+        height: 42%;
         position: relative;
         margin: 0%;
         float: none;
@@ -163,7 +162,7 @@ img {
     }
     div.suporte {
         width: 100%;
-        height: 50%;
+        height: 40%;
         position: relative;
         margin: 0%;
         float: none;
@@ -177,5 +176,21 @@ img {
         margin: 0%;
         background-color: transparent;
         margin-bottom: 10px;
-    }  
+    }     
+    .titulo-2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    div.suporte ul li {
+       margin-right: 6%;
+       margin-left: 6%;
+       margin-bottom: 20px;
+    }
+    h4 {
+        padding-top: 30px;
+    }
+    .btn-entrar {
+        padding-top: 2%;
+        padding-bottom: 10px;
+    }
 }
