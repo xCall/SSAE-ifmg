@@ -1,15 +1,10 @@
-function verificaNumero(e){
-    if (e.which !=8 && e.which != 0 &&(e.which < 48 || e.which >57)){
-        return false;
-    }
-    $(document).ready(function(){
-        $("#cpfEntrada").keypress(verificaNumero);
-    });
-}
-function formataCpf(evt){
-    vr = (navigator.appName == 'Netscape') ?evt.target.value : evt.srcElement.value;
-    if(vr.length == 3) vr = vr + ".";
-    if(vr.length == 7) vr = vr + ".";
-    if(vr.length == 11) vr = vr + "-";
-    return vr;
+function formatar(src, mask)
+{
+  var i = src.value.length;
+  var saida = mask.substring(0,1);
+  var texto = mask.substring(i)
+if (texto.substring(0,1) != saida)
+  {
+                src.value += texto.substring(0,1);
+  }
 }
