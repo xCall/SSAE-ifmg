@@ -8,20 +8,14 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-body.login .btn-entrar {
-    background-color: #CCD3E6;
-    border: none;
-    border-radius: 20px;
-    font-size: 120%;
-    height: 45px;
-    width: 100%;
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
+/*Div que contem todos as outras divs*/
+div.pai {
+    clear: both;
+    margin-top: 3%;
+    display: block;
+    
 }
-label{
-    font-family: Arial, Helvetica, sans-serif;
-}
+/*Conteudos do formulario*/
 div.form-login {
    float: left;
    width: 50%;
@@ -34,18 +28,8 @@ div.form-login {
    margin-left: 15px;
    display: block;
    height: 85%;
-
 }
-div.acesso {
-   width: 50%;
-   padding-top: 0;
-   
-}
-div.pai {
-    clear: both;
-    margin-top: 3%;
-    display: block;
-}
+/*entradas de dados*/
 input {
     margin-bottom: 6px;
     margin-top: 5%;
@@ -54,6 +38,63 @@ input:focus {
     border: 2px solid #32AB7D!important; 
     box-shadow: 0 0 0 0.2rem rgba(25,82,41,0.25)!important;
 }
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body.login .btn-entrar {
+    background-color: #CCD3E6;
+    border: none;
+    border-radius: 20px;
+    font-size: 120%;
+    height: 45px;
+    width: 100%;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+/*Div com o titulo do formulario*/
+div.acesso {
+   width: 50%;
+   padding-top: 0;
+   
+}
+div.acesso {
+    margin-top: 8%;
+    margin-left: 20%;
+}
+div.acesso span {
+    margin-left: 20%;
+}
+h4 {
+    font-size: 150%!important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    text-align: center;
+    text-justify: auto;
+    color: #32AC7D;
+}
+/*Div suporte*/
+div.suporte {
+    background-color: #DBE5E6;
+    width: 41%;
+    float: right;
+    margin-right: 7%;
+    height: 85%;
+    border-bottom-right-radius: 5px;
+    vertical-align: middle;
+}
+/*titulo da ajuda*/
+h5 {
+    font-family: 'Hoftype', Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: #33AC7E;
+    font-weight:;
+    text-align: center;
+    padding-top: 2%;
+    margin-bottom: 10px;
+}
+/*Links*/
 ul li {
     border: 1px solid #CED4DA;
     border-radius: 2px;
@@ -61,7 +102,7 @@ ul li {
     text-align: center;
     padding: 5px 4px 5px 4px;
     background-color: #32AC7D;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     width: 80%;
     margin-right: 6%;
     margin-left: 2%;
@@ -85,15 +126,7 @@ ul li a:hover {
     text-decoration: none;
     color: white;
 }
-div.suporte {
-    background-color: #DBE5E6;
-    width: 41%;
-    float: right;
-    margin-right: 7%;
-    height: 85%;
-    border-bottom-right-radius: 5px;
-    vertical-align: middle;
-}
+/*fim da div suporte*/
 .titulo {
     background-color: rgb(15,79,91);   
     width: 93%;
@@ -107,47 +140,20 @@ div.suporte {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid transparent;
-}
-h5 {
-    font-family: 'Hoftype', Arial, Helvetica, sans-serif;
-    text-align: justify;
-    color: #33AC7E;
-    font-weight:;
-    text-align: center;
-    padding-top: 2%;
-    margin-bottom: 10px;
-}
-div.acesso {
-    margin-top: 8%;
-    margin-left: 20%;
-}
-div.acesso span {
-    margin-left: 20%;
-}
-h4 {
-    font-size: 150%!important;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-weight: 900;
-    text-align: center;
-    text-justify: auto;
-    color: #32AC7D;
 }
 img {
     width: 100%;
 }
-@media only screen and (max-width: 768px) {
-    /*Background Mobile*/
+@media only screen and (max-width: 1280px) {
     body {
-        background: url("img/mobile_919x533px_assistenciaestudantil.jpg")no-repeat center center fixed;
+        background: url("img/landingpage_1440x720px_assistenciaestudantil.jpg")no-repeat center center fixed;
         background-size: cover;
         background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
     }
-    div.pai{
+    div.pai {
         margin-top: 10%;
     }
     div.form-login {
@@ -162,7 +168,7 @@ img {
     }
     div.suporte {
         width: 100%;
-        height: 40%;
+        height: 45%;
         position: relative;
         margin: 0%;
         float: none;
@@ -172,10 +178,17 @@ img {
     }
     div.titulo {
         width: 100%;
-        position: relative;
-        margin: 0%;
         background-color: transparent;
-        margin-bottom: 10px;
+        padding: 5px 0 2px 0;
+        margin-bottom: 0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        position: relative;
+        left: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }     
     .titulo-2 {
         padding-top: 5px;
@@ -192,5 +205,19 @@ img {
     .btn-entrar {
         padding-top: 2%;
         padding-bottom: 10px;
+    }
+    ul li {
+        margin-bottom: 5px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /*Background Mobile*/
+    body {
+        background: url("img/mobile_919x533px_assistenciaestudantil.jpg")no-repeat center center fixed;
+        background-size: cover;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
     }
 }
