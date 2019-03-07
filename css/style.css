@@ -162,6 +162,7 @@ img {
         position: relative;
         margin: 0%;
         float: none;
+        display: inline-block;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         border-bottom-left-radius: 0;
