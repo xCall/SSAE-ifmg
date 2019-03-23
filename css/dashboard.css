@@ -1,22 +1,31 @@
 @charset "UTF-8";
-* {
-    margin: 0;
-    padding: 0;
+
+.cabecalho {
+    background-color: #0F4F5B;
+    width: 100%;
+    height: 50px;
+    text-align: justify;
+    padding: 10px;
+    clear: both;
 }
-#check {
-   display: none;
-   z-index: 2;
-}
-#check:checked ~ .barra {
-    transform: 
-}
-.icone {
-    font-size: 30px;
-}
-.barra {
-    position: fixed;
-    background-color: #ccc;
-    width: 300px;
+.barra-lateral {
+    background-color: #8BBF61;
     height: 100%;
-    left: -300px;
+    width: 16%;
+}
+.alinhamento {
+    clear: both;
+    position: relative;
+    left: 0;
+}
+.ul-dash {
+    text-align: justify;
+}
+.li-dash {
+    padding-top: 5px;
+    font-size: 17px;
+    margin-left: 4%;
+}
+.nav-link {
+    color: azure;
 }
