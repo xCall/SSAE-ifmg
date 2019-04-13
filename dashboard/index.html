@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -13,11 +14,20 @@
             <a href="#">
                     <img src="../img/logo-ssae.png" class="logo-ssae" width="80" height="40" alt="">
             </a>
+            <span class="slide">
+                <a href="#" id="clique1" onclick="abrirSlideMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </span>
         </div>
     <!-- /Fim Cabeçalho -->
     <!-- Inicio menu lateral -->
-    <nav>
-        <div class="menu-lateral">
+    <div id="content">        
+        
+        <div id="menu" class="menu-lateral">
+            <a href="#" onclick="fecharSlideMenu()">
+                <i class="fas fa-times"></i>
+            </a>
             <ul id="lista-menu">
                 <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Home</a></li>
                 <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Cadastro</a></li>
@@ -32,8 +42,8 @@
                 <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Contesto Escolar</a></li>
             </ul>
         </div>
-    </nav>
-    <div class="linha-vertical"></div>
+    </div>
+    <div id="linha-vertical"></div>
     <!-- /Fim menu lateral -->
     <section>
         <div class="conteudo">
@@ -67,19 +77,39 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>   
         function mostrarAtivo(tag){
-        var tag_li = document.getElementById('lista-menu');
-        var tag_a = tag_li.getElementsByTagName('a');
-        for (i=0; i<tag_a.length; i++ )
-        {
-            tag_a[i].style.color = "";
-            tag_a[i].style.background = "";
-            tag_a[i].style.boxShadow = "";
-            tag_a[i].style.borderLeft = "";
-        }
+            var tag_li = document.getElementById('lista-menu');
+            var tag_a = tag_li.getElementsByTagName('a');
+            for (i=0; i<tag_a.length; i++ ){
+                tag_a[i].style.color = "";
+                tag_a[i].style.background = "";
+                tag_a[i].style.boxShadow = "";
+                tag_a[i].style.borderLeft = "";
+            }
             tag.style.color = "#777";
             tag.style.background = "#fff";
             tag.style.boxShadow = "0 2px 3px #777";
             tag.style.borderLeft = "9px solid red";
+        }
+        function abrirSlideMenu(){
+            var menu = document.getElementById('menu');
+            var content = document.getElementById('content');
+            content.style.marginLeft = "0";
+            menu.style.width = "200px";
+           /* var linhaVertical = document.getElementeById('linha-vertical');
+            
+            linhaVertical.style.height = "100%";
+            linhaVertical.style.borderLeft = "2px dashed #fff";
+            linhaVertical.style.marginLeft = "200px";
+            linhaVertical.style.marginTop = "50px";
+            linhaVertical.style.position = "fixed";*/
+        }
+        function fecharSlideMenu(){
+            var menu = document.getElementById('menu');
+            var content = document.getElementById('content');
+            menu.style.widht = "-200px";
+            content.style.marginLeft = "-200px";
+            content.style.left = "-200px";
+            menu.style.transition = "0.7s";
         }
     </script>
     </script>
