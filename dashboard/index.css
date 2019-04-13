@@ -41,7 +41,7 @@
         transform: rotate(0);
     }
     75% {
-        transform: rotate(8deg);
+        transform: rotate(-8deg);
     }
     100% {
         transform: rotate(0);
@@ -87,7 +87,7 @@ ul li a:hover {
 */
 .linha-vertical {
     height: 100%;
-    border-left: 2px solid #777;
+    border-left: 2px dashed #fff;
     margin-left: 200px;
     margin-top: 50px;
     position: fixed;
@@ -98,12 +98,14 @@ nav a {
     display: inline-block;
     padding: 10px 15px;
     width: 100%;
+    box-shadow: 0
 }
 nav a:hover {
     background-color: #fff;
     color: #777;
-    box-shadow: 0 2px 3px #777;
+    box-shadow: 0 2px 4px #777;
     text-decoration: none;
+    border-left: 9px solid red;
 }
 .btn-nav { 
     transition: .5s;
