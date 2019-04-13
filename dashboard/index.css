@@ -105,15 +105,17 @@ nav a:hover {
     color: #777;
     box-shadow: 0 2px 4px #777;
     text-decoration: none;
-    border-left: 9px solid red;
+    border-left: 9px solid green;
 }
 .btn-nav { 
     transition: .5s;
 }
 /*Fim Ul e Li*/
 footer {
-    background-color: rgba(100%,100%,100%,25%);
+    background-color: #fff;
     margin-left: 200px; 
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 .img-footer {
     width: 50%;
