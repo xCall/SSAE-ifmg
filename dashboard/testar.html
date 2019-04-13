@@ -1,0 +1,23 @@
+<html>
+<head>
+ <script>   
+   function mostrarAtivo(tag){
+   var tag_li = document.getElementById('lista_menu');
+   var tag_a = tag_li.getElementsByTagName('a');
+   for (i=0; i<tag_a.length; i++ )
+   {
+      tag_a[i].style.color = "";
+   }
+      tag.style.color = "#ff0000";
+   }
+</script>
+</head>
+<body>
+<ul id="lista_menu">
+   <li><a href="#" onclick="mostrarAtivo(this);">Home</a></li>
+   <li><a href="#" onclick="mostrarAtivo(this);">Fotos</a></li>
+   <li><a href="#" onclick="mostrarAtivo(this);">Agenda</a></li>
+   <li><a href="#" onclick="mostrarAtivo(this);">Contato</a></li>
+</ul>
+</body>
+</html>
