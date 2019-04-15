@@ -10,20 +10,19 @@
 </head>
 <body class="bg">
     <!-- Inicio Cabeçalho -->
-        <div class="cabecalho">
+        <nav id="corpo" class="cabecalho">
+            <button onclick="abrirSlideMenu()">
+                <span class="slide">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
             <a href="#">
                     <img src="../img/logo-ssae.png" class="logo-ssae" width="80" height="40" alt="">
             </a>
-            <span class="slide">
-                <a href="#" id="clique1" onclick="abrirSlideMenu()">
-                    <i class="fas fa-bars"></i>
-                </a>
-            </span>
-        </div>
+        </nav>
     <!-- /Fim Cabeçalho -->
     <!-- Inicio menu lateral -->
     <div id="content">        
-        
         <div id="menu" class="menu-lateral">
             <a href="#" onclick="fecharSlideMenu()">
                 <i class="fas fa-times"></i>
@@ -49,6 +48,7 @@
         <div class="conteudo">
 
         </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </section>
     <!-- Inicio footer -->
         <footer class="footer navbar-fixed-bottom">
@@ -71,46 +71,22 @@
 
 
 
-
+    <script
+    src="https://code.jquery.com/jquery-3.4.0.js"
+    integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+    crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="functions.js"></script>
     <script>   
-        function mostrarAtivo(tag){
-            var tag_li = document.getElementById('lista-menu');
-            var tag_a = tag_li.getElementsByTagName('a');
-            for (i=0; i<tag_a.length; i++ ){
-                tag_a[i].style.color = "";
-                tag_a[i].style.background = "";
-                tag_a[i].style.boxShadow = "";
-                tag_a[i].style.borderLeft = "";
+       $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('nav').addClass('scrollNavbar');
+            } else {
+                $('nav').removeClass('scrollNavbar');
             }
-            tag.style.color = "#777";
-            tag.style.background = "#fff";
-            tag.style.boxShadow = "0 2px 3px #777";
-            tag.style.borderLeft = "9px solid red";
-        }
-        function abrirSlideMenu(){
-            var menu = document.getElementById('menu');
-            var content = document.getElementById('content');
-            content.style.marginLeft = "0";
-            menu.style.width = "200px";
-           /* var linhaVertical = document.getElementeById('linha-vertical');
-            
-            linhaVertical.style.height = "100%";
-            linhaVertical.style.borderLeft = "2px dashed #fff";
-            linhaVertical.style.marginLeft = "200px";
-            linhaVertical.style.marginTop = "50px";
-            linhaVertical.style.position = "fixed";*/
-        }
-        function fecharSlideMenu(){
-            var menu = document.getElementById('menu');
-            var content = document.getElementById('content');
-            menu.style.widht = "-200px";
-            content.style.marginLeft = "-200px";
-            content.style.left = "-200px";
-            menu.style.transition = "0.7s";
-        }
+        });
     </script>
     </script>
 </body>
