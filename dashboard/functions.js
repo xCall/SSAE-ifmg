@@ -1,3 +1,12 @@
+$(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+        $('nav').addClass('scrollNavbar');
+        $('main').addClass('scrollMenuLateral');
+    } else {
+        $('nav').removeClass('scrollNavbar');
+        $('main').removeClass('scrollMenuLateral');
+    }
+});
 function mostrarAtivo(tag){
     var tag_li = document.getElementById('lista-menu');
     var tag_a = tag_li.getElementsByTagName('a');
@@ -17,10 +26,6 @@ function abrirSlideMenu(){
     var content = document.getElementById('content');
     content.style.marginLeft = "0";
     menu.style.width = "200px";
-    if(scrollTop > 50){
-        menu.style.marginTop = "60px";
-        content.style.marginTop = "60px";
-    }
 }
 function fecharSlideMenu(){
     var menu = document.getElementById('menu');

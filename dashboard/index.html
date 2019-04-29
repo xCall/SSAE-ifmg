@@ -11,24 +11,26 @@
 <body class="bg">
     <!-- Inicio Cabeçalho -->
         <nav id="corpo" class="cabecalho">
-            <button onclick="abrirSlideMenu()">
+            <button class="botao-menu" onclick="abrirSlideMenu()">
                 <span class="slide">
-                    <i class="fas fa-bars"></i>
+                    <img src="../img/logo-ssae.png" class="logo-ssae" width="80" height="40" alt="">
                 </span>
             </button>
-            <a href="#">
-                    <img src="../img/logo-ssae.png" class="logo-ssae" width="80" height="40" alt="">
-            </a>
+            <!--<a href="#">
+                <img src="../img/logo-ssae.png" class="logo-ssae" width="80" height="40" alt="">
+            </a>-->
         </nav>
     <!-- /Fim Cabeçalho -->
     <!-- Inicio menu lateral -->
     <div id="content">        
-        <div id="menu" class="menu-lateral">
-            <a href="#" onclick="fecharSlideMenu()">
-                <i class="fas fa-times"></i>
-            </a>
+        <main id="menu" class="menu-lateral">
+            <button onclick="fecharSlideMenu()">
+                <span class="slide">
+                    <i class="fas fa-times"></i>
+                </span>
+            </button>
             <ul id="lista-menu">
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Home</a></li>
+                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="index.html">Home</a></li>
                 <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Cadastro</a></li>
                 <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Documentos</a></li>
                 <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Informações</a></li>
@@ -40,7 +42,7 @@
                 <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Calendario</a></li>
                 <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Contesto Escolar</a></li>
             </ul>
-        </div>
+        </main>
     </div>
     <div id="linha-vertical"></div>
     <!-- /Fim menu lateral -->
@@ -48,7 +50,6 @@
         <div class="conteudo">
 
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </section>
     <!-- Inicio footer -->
         <footer class="footer navbar-fixed-bottom">
@@ -80,13 +81,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="functions.js"></script>
     <script>   
-       $(window).scroll(function() {
-            if ($(document).scrollTop() > 50) {
-                $('nav').addClass('scrollNavbar');
-            } else {
-                $('nav').removeClass('scrollNavbar');
-            }
-        });
+      
     </script>
     </script>
 </body>

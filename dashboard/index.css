@@ -50,7 +50,7 @@
     transition: .7s;
     width: 0;
     height: 100vh;
-    background-color: #0F4F5B;
+    background-color: rgba(111,192,148,.20%);
     transition: all .7s ease-in;
 }
 /*Inicio Cabeçalho*/
@@ -74,14 +74,14 @@ nav.scrollNavbar img {
     margin-top: 5px;
     transition: .3s;
 }
-.logo-ssae:hover {
+/*.logo-ssae:hover {
     animation-name: logossae;
     animation-delay: .5s;
     animation-duration: .6s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     box-shadow: 1px 1px 3px #fff;
-}
+}*/
 /*Inicio Cabeçalho*/
 /*Inicio Ul e Li*/
 /*
@@ -139,11 +139,28 @@ div .btn-nav:hover {
 /*Fim Ul e Li*/
 footer {
     background-color: #fff;
-    margin-left: 200px; 
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 50px;
 }
 .img-footer {
     width: 50%;
 }
-
+.botao-menu {
+    background-color: rgba(0, 0, 0, .20%);
+    border: none;
+    padding: 0;
+}
+.botao-menu:active {
+    border: none;
+}
+section {
+    height: 100vh;
+}
+ .scrollMenuLateral {
+    transition: all 0.3s ease-in; 
+    background-color: #0F4F5B!important;
+}
+div .scrollMenuLateral {
+    padding-top: 10px;
+}
