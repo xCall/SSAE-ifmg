@@ -16,7 +16,7 @@ function mostrarAtivo(tag){
         tag_a[i].style.boxShadow = "";
         tag_a[i].style.borderLeft = "";
     }
-    tag.style.color = "#777";
+    tag.style.color = "red";
     tag.style.background = "#fff";
     tag.style.boxShadow = "0 2px 3px #777";
     tag.style.borderLeft = "9px solid red";
@@ -26,6 +26,7 @@ function abrirSlideMenu(){
     var content = document.getElementById('content');
     content.style.marginLeft = "0";
     menu.style.width = "200px";
+
 }
 function fecharSlideMenu(){
     var menu = document.getElementById('menu');

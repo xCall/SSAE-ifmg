@@ -1,8 +1,18 @@
 @charset "UTF-8";
+/*Inicio Conf Padroes*/
 * {
     margin: 0%;
     padding: 0%;
 }
+.bg {
+    background: url("../img/mobile_919x533px_assistenciaestudantil.jpg")no-repeat center center fixed;
+    background-size: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+/*Fim Conf Padroes*/
 /*Inicio Animações*/
 @keyframes logossae {
     0% {
@@ -31,17 +41,11 @@
         background-color: #0F4F5B;
     }
 }
-.bg {
-    background: url("../img/mobile_919x533px_assistenciaestudantil.jpg")no-repeat center center fixed;
-    background-size: cover;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
+/*Fim Animacoes*/
 .conteudo {
     height: 100vh;
 }
+/*Inicio Menu*/
 .menu-lateral {
     overflow-x: hidden;
     position: fixed;
@@ -50,15 +54,42 @@
     transition: .7s;
     width: 0;
     height: 100vh;
-    background-color: rgba(111,192,148,.20%);
+    background-color: green;
     transition: all .7s ease-in;
 }
-/*Inicio Cabeçalho*/
+div .scrollMenuLateral {
+    padding-top: 10px;
+} 
+.close-menu {
+    width: 100%;
+    padding: 8px;
+    margin: 2px;
+    float: right;
+    transition: all none;
+    background: transparent;
+    border: none;
+    color: #777;
+}
+i .efeito {
+    font-size: 15px;
+    width: 10px;
+    height: 10px;
+    float: right;
+}
+.efeito:hover {
+    transform: rotate(180deg);
+    transition: .5s;
+}
+.space {
+    float: right;
+} 
 .cabecalho {
     width: 100%;
     height: 50px;
     background-color: rgba(114,193,146, 25%);
     position: fixed;
+    display: block;
+    z-index: 1;
 }
 nav.scrollNavbar {
     background-color: #0F4F5B!important;
@@ -74,50 +105,16 @@ nav.scrollNavbar img {
     margin-top: 5px;
     transition: .3s;
 }
-/*.logo-ssae:hover {
-    animation-name: logossae;
-    animation-delay: .5s;
-    animation-duration: .6s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    box-shadow: 1px 1px 3px #fff;
-}*/
-/*Inicio Cabeçalho*/
-/*Inicio Ul e Li*/
-/*
-ul {
-    list-style: none; 
-    color: aliceblue;
-}
-ul li a {
-    color: #000;
-    text-decoration: none;
-    transform: translate(-50%,-50%);
-    font-size: 18px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: arial;
-    background: #rgb(154,201,133);
-    padding: 18px;
-    display: block;
-}    
-ul li a:hover {
-    color: #9CC985;
-    background-color: #fff;
-    text-decoration: none;
-}
-*/
 .linha-vertical {
     height: 100%;
-    border-left: 2px dashed #fff;
+    border-left: 2px solid #000;
     margin-left: 200px;
     margin-top: 50px;
     position: fixed;
-    
 }
 div .btn-nav {
     color: #fff;
-    display: inline-block;
+    display: block;
     padding: 10px 15px;
     width: 100%;
     box-shadow: 0
@@ -125,26 +122,12 @@ div .btn-nav {
 div .btn-nav:hover {
     background-color: #fff;
     color: #777;
-    box-shadow: 0 2px 4px #777;
+    box-shadow: 0 3px 6px green;
     text-decoration: none;
     border-left: 9px solid green;
 }
 .btn-nav { 
     transition: .5s;
-}
-#content {
-    transition: margin-left .7s;
-    width: 100%;
-}
-/*Fim Ul e Li*/
-footer {
-    background-color: #fff;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 50px;
-}
-.img-footer {
-    width: 50%;
 }
 .botao-menu {
     background-color: rgba(0, 0, 0, .20%);
@@ -160,7 +143,55 @@ section {
  .scrollMenuLateral {
     transition: all 0.3s ease-in; 
     background-color: #0F4F5B!important;
+    display: table;
 }
-div .scrollMenuLateral {
+/*Fim Menu*/
+#content {
+    transition: margin-left .7s;
+    width: 100%;
+}
+
+footer {
+    background-color: #fff;
     padding-top: 10px;
+    padding-bottom: 50px;
+}
+.img-footer {
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+/*botao sair*/
+.close-menu:hover {
+    background-color: #fff;
+    color: #777;
+    box-shadow: 0 2px 4px red;
+    text-decoration: none;
+    border-right: 9px solid red; 
+    transition: all .5s ease-in;
+}
+.close-menu {
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    width: 100%;
+    box-shadow: 0;
+    transition: all .5s ease-in;
+}
+ul {
+    float: right;
+    width: 100%;
+    list-style: none;
+}
+.caixa-padrao {
+    margin-top: 50px;
+}
+.caixa1 {
+    margin-left: %;
+}
+.desenvolvido {
+    overflow: hidden;
+    text-align: center;
+    margin-top: 40px;
 }
