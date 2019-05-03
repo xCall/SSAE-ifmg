@@ -1,3 +1,11 @@
+/*
+    Versao: 0.1.0
+    Ultima atualizacao: 02/05/2019
+    Criado por: carlosfaita99@gmail.com
+    modificado em:                  por:
+    modificacoes realizadas: 
+    ***NAO ESQUECA DE FAZER COMENTARIOS***
+*/
 @charset "UTF-8";
 /*Inicio Conf Padroes*/
 * {
@@ -14,7 +22,7 @@
 }
 /*Fim Conf Padroes*/
 /*Inicio Animações*/
-@keyframes logossae {
+@keyframes queda {
     0% {
         transform: rotate(0);
     }
@@ -80,9 +88,6 @@ i .efeito {
     transform: rotate(180deg);
     transition: .5s;
 }
-.space {
-    float: right;
-} 
 .cabecalho {
     width: 100%;
     height: 50px;
@@ -104,13 +109,6 @@ nav.scrollNavbar img {
     margin-left: 10px;
     margin-top: 5px;
     transition: .3s;
-}
-.linha-vertical {
-    height: 100%;
-    border-left: 2px solid #000;
-    margin-left: 200px;
-    margin-top: 50px;
-    position: fixed;
 }
 div .btn-nav {
     color: #fff;
@@ -137,60 +135,38 @@ div .btn-nav:hover {
 .botao-menu:active {
     border: none;
 }
-section {
-    height: 100vh;
-}
- .scrollMenuLateral {
+.scrollMenuLateral {
     transition: all 0.3s ease-in; 
     background-color: #0F4F5B!important;
 }
-/*Fim Menu*/
 #content {
     transition: margin-left .7s;
     width: 100%;
 }
-
-footer {
-    background-color: #fff;
-    padding-top: 10px;
-    padding-bottom: 50px;
-}
-.img-footer {
-    width: 80%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-/*botao sair*/
-.close-menu:hover {
-    background-color: #fff;
-    color: #777;
-    box-shadow: 0 2px 4px red;
-    text-decoration: none;
-    border-right: 9px solid red; 
-    transition: all .5s ease-in;
-}
-.close-menu {
-    color: #fff;
-    display: inline-block;
-    padding: 10px 15px;
-    width: 100%;
-    box-shadow: 0;
-    transition: all .5s ease-in;
-}
-ul {
-    float: right;
-    width: 100%;
-    list-style: none;
-}
-.caixa-padrao {
-    margin-top: 50px;
-}
-.desenvolvido {
-    overflow: hidden;
-    text-align: center;
-    margin-top: 40px;
-}
+    /* Inicio botao sair*/
+    .close-menu:hover {
+        background-color: #fff;
+        color: #777;
+        box-shadow: 0 2px 4px red;
+        text-decoration: none;
+        border-right: 9px solid red; 
+        transition: all .5s ease-in;
+    }
+    .close-menu {
+        color: #fff;
+        display: inline-block;
+        padding: 10px 15px;
+        width: 100%;
+        box-shadow: 0;
+        transition: all .5s ease-in;
+    }
+    ul {
+        float: right;
+        width: 100%;
+        list-style: none;
+    }
+    /* Fim botao sair*/
+/*Fim Menu*/
 
 
 
@@ -202,16 +178,17 @@ ul {
 
 
 
-.posicionamento {
-    
-}
+
+
+
 
 .link-footer {
     text-decoration: none;
     font-style: none;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 3px 0 2px 8px;
+    margin-left: 8px!important;
+    margin-top: 10px;
     color: #777;
     transition: all .5s;
     text-align: initial;
@@ -256,6 +233,10 @@ ul {
 .sociais-youtube:hover,
 .sociais-twitter:hover {
     color: #0F4F5B;
+    transition: all .5s;
+    box-shadow: 0 3px 2px #fff;
+    animation-name: queda;
+    animation-duration: .3s;
 }
 .dados {
     text-align: center;
@@ -264,4 +245,23 @@ ul {
     margin-top: 50;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+.desenvolvido {
+    overflow: hidden;
+    text-align: center;
+    margin-top: 40px;
+}
+footer {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+.img-footer {
+    margin-left: 10px;
+    width: 95%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.icone-titulo {
+    font-size: 15px;
 }
