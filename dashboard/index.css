@@ -1,10 +1,5 @@
 /*
-    Versao: 0.1.0
-    Ultima atualizacao: 02/05/2019
-    Criado por: carlosfaita99@gmail.com
-    modificado em:                  por:
-    modificacoes realizadas: 
-    ***NAO ESQUECA DE FAZER COMENTARIOS***
+
 */
 @charset "UTF-8";
 /*Inicio Conf Padroes*/
@@ -181,7 +176,7 @@ div .btn-nav:hover {
 
 
 
-
+/*Inicio footer*/
 .link-footer {
     text-decoration: none;
     font-style: none;
@@ -264,4 +259,16 @@ footer {
 }
 .icone-titulo {
     font-size: 15px;
+}
+/*Fim footer*/
+@media only screen and (max-width: 768px) {
+   .alinhamento {
+       text-align: center;
+   } 
+   .menu-lateral {
+       width: 100%;
+   }
+}
+@media only screen and (max-width: 508px){
+
 }

@@ -1,10 +1,5 @@
 /*
-    Versao: 0.1.0
-    Ultima atualizacao: 02/05/2019
-    Criado por: carlosfaita99@gmail.com
-    modificado em:                  por:
-    modificacoes realizadas: 
-    ***NAO ESQUECA DE FAZER COMENTARIOS***
+   
 */
 
 //Funcao para adicionar e remover classes
