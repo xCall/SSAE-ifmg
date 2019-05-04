@@ -1,7 +1,10 @@
+@charset "UTF-8";
 /*
 
+    leia o comentario no fim da pagina
+
+
 */
-@charset "UTF-8";
 /*Inicio Conf Padroes*/
 * {
     margin: 0%;
@@ -54,11 +57,10 @@
     position: fixed;
     margin-top: 50px;
     z-index: 1;
-    transition: .7s;
     width: 0;
     height: 100vh;
     background-color: green;
-    transition: all .7s ease-in;
+    transition: all .5s ease-in;
 }
 div .scrollMenuLateral {
     padding-top: 10px;
@@ -103,7 +105,7 @@ nav.scrollNavbar img {
 .logo-ssae {
     margin-left: 10px;
     margin-top: 5px;
-    transition: .3s;
+    transition: .5s;
 }
 div .btn-nav {
     color: #fff;
@@ -131,11 +133,11 @@ div .btn-nav:hover {
     border: none;
 }
 .scrollMenuLateral {
-    transition: all 0.3s ease-in; 
+    transition: all 0.5s ease-in; 
     background-color: #0F4F5B!important;
 }
 #content {
-    transition: margin-left .7s;
+    transition: margin-left .5s;
     width: 100%;
 }
     /* Inicio botao sair*/
@@ -162,20 +164,6 @@ div .btn-nav:hover {
     }
     /* Fim botao sair*/
 /*Fim Menu*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Inicio footer*/
 .link-footer {
     text-decoration: none;
@@ -261,14 +249,20 @@ footer {
     font-size: 15px;
 }
 /*Fim footer*/
-@media only screen and (max-width: 768px) {
-   .alinhamento {
-       text-align: center;
-   } 
-   .menu-lateral {
-       width: 100%;
-   }
-}
-@media only screen and (max-width: 508px){
+@media only screen and (max-width: 767px) {
+    .alinhamento {
+        text-align: center;
+    }
+    /*
 
+      Toda vez que recarregada a página abre por padrao o menu, basta fecha-ló 
+      e usar normalmente. tentei corrigir por javascript usando o screen.width e o window.width
+      e tambem usando jquery.
+
+
+    */
+   .navbar-inverse {
+      text-align: center;
+      width: 100%!important;
+   }
 }
