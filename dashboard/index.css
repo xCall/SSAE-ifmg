@@ -1,25 +1,183 @@
 @charset "UTF-8";
-/*
-
-    leia o comentario no fim da pagina
-
-
-*/
-/*Inicio Conf Padroes*/
-* {
-    margin: 0%;
-    padding: 0%;
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+    transition: all .3s;
 }
-.bg {
-    background: url("../img/mobile_919x533px_assistenciaestudantil.jpg")no-repeat center center fixed;
-    background-size: cover;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
 }
-/*Fim Conf Padroes*/
-/*Inicio Animações*/
+a,a:hover,a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all .3s;
+}
+/********* Navbar ***********/
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+.line-solid {
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid black;
+    margin: 40px 0;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+#sidebar {
+    width: 250px;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #0F4F5B;
+    color: #fff;
+    transition: all 0.3s;
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #0F4F5B;
+}
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #DCE6E8;
+    background: #0f414d;
+}
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: rgba(16, 112, 125, 0.84);
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #0F6B77;
+}
+ul.CTAs {
+    padding: 20px;
+}
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+a.article,
+a.article:hover {
+    background: #0F6B77 !important;
+    color: #fff !important;
+}
+.logo-ssae {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 2px!important;
+}
+.titulo-dashboard {
+    font-weight: bold;
+    font-size: 20px;
+}
+.cabecalho {
+    width: 100%;
+    height: 70px;
+}
+.conteudo {
+    padding-top: 80px;
+}
+.close-menu {
+    width: 100%;
+    border-radius: 0px;
+}
+/************* Content **********************/
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#content.active {
+    width: 100%;
+}
+/************* Media Querys *****************/
+@media (max-width: 768px) {
+    #sidebar {
+        width: 99vw;
+        margin-left: -100vw;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+    footer {
+        text-align: center;
+    }
+}
+/************* Transição *********************/
 @keyframes queda {
     0% {
         transform: rotate(0);
@@ -36,138 +194,20 @@
     100% {
         transform: rotate(0);
     }
-} 
-@keyframes mudacor {
-    0% {
-        width: 0%;
-        background-color: #0F4F5B;
-    }
-    100% {
-        width: 100%;
-        background-color: #0F4F5B;
-    }
 }
-/*Fim Animacoes*/
-.conteudo {
-    height: 100vh;
-}
-/*Inicio Menu*/
-.menu-lateral {
-    overflow-x: hidden;
-    position: fixed;
-    margin-top: 50px;
-    z-index: 1;
-    width: 0;
-    height: 100vh;
-    background-color: green;
-    transition: all .5s ease-in;
-}
-div .scrollMenuLateral {
-    padding-top: 10px;
-} 
-.close-menu {
-    width: 100%;
-    padding: 8px;
-    margin: 2px;
-    float: right;
-    transition: all none;
-    background: transparent;
-    border: none;
-    color: #777;
-}
-i .efeito {
-    font-size: 15px;
-    width: 10px;
-    height: 10px;
-    float: right;
-}
-.efeito:hover {
-    transform: rotate(180deg);
-    transition: .5s;
-}
-.cabecalho {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(114,193,146, 25%);
+/*************** Footer *********************/
+.navbar-fundo {
+    background-color: #DBE5E6;
     position: fixed;
     display: block;
+    top: 0!important;
+    right: 0!important;
+    /*padding-left: 300px!important;*/
     z-index: 1;
-}
-nav.scrollNavbar {
-    background-color: #0F4F5B!important;
-    height: 60px;
-    transition: all .5s ease-in;
-}
-nav.scrollNavbar img {
-    height: 45px;
-    width: 90px;
-}
-.logo-ssae {
-    margin-left: 10px;
-    margin-top: 5px;
-    transition: .5s;
-}
-div .btn-nav {
-    color: #fff;
-    display: block;
-    padding: 10px 15px;
-    width: 100%;
-    box-shadow: 0
-}
-div .btn-nav:hover {
-    background-color: #fff;
-    color: #777;
-    box-shadow: 0 3px 6px green;
-    text-decoration: none;
-    border-left: 9px solid green;
-}
-.btn-nav { 
-    transition: .5s;
-}
-.botao-menu {
-    background-color: rgba(0, 0, 0, .20%);
-    border: none;
-    padding: 0;
-}
-.botao-menu:active {
-    border: none;
-}
-.scrollMenuLateral {
-    transition: all 0.5s ease-in; 
-    background-color: #0F4F5B!important;
-}
-#content {
-    transition: margin-left .5s;
     width: 100%;
 }
-    /* Inicio botao sair*/
-    .close-menu:hover {
-        background-color: #fff;
-        color: #777;
-        box-shadow: 0 2px 4px red;
-        text-decoration: none;
-        border-right: 9px solid red; 
-        transition: all .5s ease-in;
-    }
-    .close-menu {
-        color: #fff;
-        display: inline-block;
-        padding: 10px 15px;
-        width: 100%;
-        box-shadow: 0;
-        transition: all .5s ease-in;
-    }
-    ul {
-        float: right;
-        width: 100%;
-        list-style: none;
-    }
-    /* Fim botao sair*/
-/*Fim Menu*/
-/*Inicio footer*/
 .link-footer {
     text-decoration: none;
-    font-style: none;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 8px!important;
@@ -178,10 +218,8 @@ div .btn-nav:hover {
 }
 .link-footer:link {
     text-decoration: none;
-    font-style: none;
 }
 .link-footer:hover {
-    font-style: none;
     text-decoration: none;
     color: #0F4F5B;
     transition: all .5s;
@@ -249,20 +287,15 @@ footer {
     font-size: 15px;
 }
 /*Fim footer*/
-@media only screen and (max-width: 767px) {
-    .alinhamento {
-        text-align: center;
-    }
-    /*
-
-      Toda vez que recarregada a página abre por padrao o menu, basta fecha-ló 
-      e usar normalmente. tentei corrigir por javascript usando o screen.width e o window.width
-      e tambem usando jquery.
-
-
-    */
-   .navbar-inverse {
-      text-align: center;
-      width: 100%!important;
-   }
+div .btn-nav {
+    color: #fff;
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+}
+div .btn-nav:hover {
+    background-color: #fff;
+    color: #777;
+    text-decoration: none;
+    border-left: 9px solid green;
 }

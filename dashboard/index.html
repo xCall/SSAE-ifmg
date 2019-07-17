@@ -1,121 +1,138 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!--
-
-    -->
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="">
-
-    <title>SSAE - Dashboard</title>
-    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Página Inicial</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 </head>
-<body class="bg">
-    <!-- Inicio Cabeçalho -->
-        <nav id="corpo" class="cabecalho">
-            <button class="botao-menu" id="open" value="1" onclick="abrirSlideMenu()">
-                <span class="slide">
-                    <img src="../img/logo-ssae.png" class="logo-ssae" width="80" height="40" alt="Botao para acessar menu">
-                </span>
-            </button>
-        </nav>
-    <!-- /Fim Cabeçalho -->
-    <!-- Inicio menu lateral -->
-    <div role="main" id="content">        
-        <main id="menu" class="menu-lateral">
-            <button class="close-menu" onclick="fecharSlideMenu()">
-                <span class="slide">
-                    <i class="efeito fas fa-times"></i>
-                </span>
-            </button>
-            <ul id="lista-menu">
-                <li class=""><a class="btn-nav" onclick="mostrarAtivo(this);" href="index.html">Home</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Cadastro</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Documentos</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Informações</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Editais</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Resultados</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Configurações</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Site IFMG</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Consultar</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Calendario</a></li>
-                <li><a class="btn-nav" onclick="mostrarAtivo(this);" href="#">Contesto Escolar</a></li>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="justify-content-center sidebar-header">
+                <svg class="logo-ssae" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="116" viewBox="240 302 240 116">
+                    <image id="_" data-name="]" x="245" y="316" width="230" height="88" xlink:href="data:img/png;base64,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"/>
+                </svg>
+            </div>
+            <ul id="lista-menu" class="list-unstyled components">
+                <p class="text-center titulo-dashboard">Dashboard SSAE</p>
+                <button type="button" id="sidebarCollapse-close" class="btn close-menu" style="background-color: #32AC7D; color: #fff">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Voltar</span>
+                </button>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li><a href="#" class="btn-nav"  onclick="mostrarAtivo(this);">Home 1</a></li>
+                        <li><a href="#" class="btn-nav"  onclick="mostrarAtivo(this);">Home 2</a></li>
+                        <li><a href="#" class="btn-nav"  onclick="mostrarAtivo(this);">Home 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="btn-nav" onclick="mostrarAtivo(this);">sobre</a></li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Usuário</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li><a href="#" class="btn-nav" onclick="mostrarAtivo(this);">Editar dados</a></li>
+                        <li><a href="#" class="btn-nav" onclick="mostrarAtivo(this);">Configurações da conta</a></li>
+                        <li><a href="#" class="btn-nav" onclick="mostrarAtivo(this);">Recuperar conta</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="btn-nav" onclick="mostrarAtivo(this);">Portifolio</a></li>
+                <li><a href="#" class="btn-nav" onclick="mostrarAtivo(this);">Contato</a></li>
             </ul>
-        </main>
-    </div>
-    <div id="linha-vertical"></div>
-    <!-- /Fim menu lateral -->
-    <!-- Inicio seçao de conteudos -->
-    <section>
-        <div class="conteudo">
+        </nav>
 
+        <!-- Content  -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-fundo">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn" style="background-color: #32AC7D; color: #fff">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="conteudo">
+                <h2>Exemplos em Lorem ipsum</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="line"></div>
+
+                <h2>Lorem Ipsum Dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="line"></div>
+
+                <h2>Lorem Ipsum Dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="line"></div>
+
+                <h3>Lorem Ipsum Dolor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <footer class="footer navbar-fixed-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="line-solid"></div>
+                        <div class="alinhamento col-md-3">
+                            <h6 class="titulo-footer">MAPA DO SITE <i class="icone-titulo fas fa-check"></i></h6><br>
+                            <a class="link-footer" href="#">Quem somos <i class="fas fa-caret-square-down"></i></a><br>
+                            <a class="link-footer" href="#">Governo <i class="fas fa-caret-square-down"></i></a><br>
+                            <a class="link-footer" href="#">Notícias <i class="fas fa-caret-square-down"></i></a><br>
+                            <a class="link-footer" href="#">FAQ <i class="fas fa-caret-square-down"></i></a><br>
+                            <a class="link-footer" href="#">IFMG <i class="fas fa-caret-square-down"></i></a><br>
+                        </div>
+                        <div class="alinhamento col-md-3">
+                            <h6 class="titulo-footer">PRECISA DE SUPORTE <i class="icone-titulo fas fa-check"></i></h6><br>
+                            <a class="link-footer" href="#"><i class="fas fa-comments"></i> Chat Online <i class="fas fa-caret-square-down"></i></a><br>
+                            <a class="link-footer" href="#"><i class="fas fa-envelope"></i> E-mail <i class="fas fa-caret-square-down"></i></a><br>
+                            <a class="link-footer" href="#"><i class="fas fa-inbox"></i> Fale conosco <i class="fas fa-caret-square-down"></i></a><br>
+                            <a class="link-footer" href="#"><i class="fas fa-phone-square"></i> Telefone <i class="fas fa-caret-square-down"></i></a><br>
+                        </div>
+                        <div class="alinhamento col-md-3">
+                            <h6 class="titulo-footer">SIGA NOS <i class="icone-titulo fas fa-check"></i></i></h6><br>
+                            <a class="link-footer" href="www.instagram.com"><i class="fab fa-instagram sociais-instagram"></i> Instagram</a><br>
+                            <a class="link-footer" href="www.youtube.com"><i class="fab fa-youtube sociais-youtube"></i> Youtube</a><br>
+                            <a class="link-footer" href="www.twitter.com"><i class="fab fa-twitter sociais-twitter"></i> Twitter</a><br>
+                            <a class="link-footer" href="www.facebook.com"><i class="fab fa-facebook sociais-facebook"></i> Facebook</a><br>
+                        </div>
+                        <div class="col-md-3">
+                            <img class="img-footer" src="../img/chamada_landingpage_assistenciaestudantil.png" alt="Logo SSAE"><br>
+                            <img class="img-footer" src="../img/bam2.jpg" alt="Logo IFMG">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col dados">
+                            <h6>Desenvolvido pelo melhor aluno da info kkkkkkkk </h6>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </section>
-    <!-- /Fim seçao de conteudos -->
-    <!-- Inicio footer -->
-        <footer class="footer navbar-fixed-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="alinhamento col-md-3">
-                        <h6 class="titulo-footer">MAPA DO SITE <i class="icone-titulo fas fa-check"></i></h6><br>
-                        <a class="link-footer" href="#">Quem somos <i class="fas fa-caret-square-down"></i></a><br>
-                        <a class="link-footer" href="#">Governo <i class="fas fa-caret-square-down"></i></a><br>
-                        <a class="link-footer" href="#">Notícias <i class="fas fa-caret-square-down"></i></a><br>
-                        <a class="link-footer" href="#">FAQ <i class="fas fa-caret-square-down"></i></a><br>
-                        <a class="link-footer" href="#">IFMG <i class="fas fa-caret-square-down"></i></a><br>
-                    </div>
-                    <div class="alinhamento col-md-3">
-                        <h6 class="titulo-footer">PRECISA DE SUPORTE <i class="icone-titulo fas fa-check"></i></h6><br>
-                        <a class="link-footer" href="#"><i class="fas fa-comments"></i> Chat Online <i class="fas fa-caret-square-down"></i></a><br>
-                        <a class="link-footer" href="#"><i class="fas fa-envelope"></i> E-mail <i class="fas fa-caret-square-down"></i></a><br>
-                        <a class="link-footer" href="#"><i class="fas fa-inbox"></i> Fale conosco <i class="fas fa-caret-square-down"></i></a><br>
-                        <a class="link-footer" href="#"><i class="fas fa-phone-square"></i> Telefone <i class="fas fa-caret-square-down"></i></a><br>
-                    </div>
-                    <div class="alinhamento col-md-3">
-                        <h6 class="titulo-footer">SIGA NOS <i class="icone-titulo fas fa-check"></i></i></h6><br>
-                        <a class="link-footer" href="www.instagram.com"><i class="fab fa-instagram sociais-instagram"></i> Instagram</a><br>
-                        <a class="link-footer" href="www.youtube.com"><i class="fab fa-youtube sociais-youtube"></i> Youtube</a><br>
-                        <a class="link-footer" href="www.twitter.com"><i class="fab fa-twitter sociais-twitter"></i> Twitter</a><br>
-                        <a class="link-footer" href="www.facebook.com"><i class="fab fa-facebook sociais-facebook"></i> Facebook</a><br>
-                    </div>
-                    <div class="col-md-3">
-                        <img class="img-footer" src="../img/chamada_landingpage_assistenciaestudantil.png" alt="Logo SSAE"><br>
-                        <img class="img-footer" src="../img/bam2.jpg" alt="Logo IFMG">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col dados">
-                        <h6>Desenvolvido pelo melhor aluno da info kkkkkkkk </h6>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    <!-- /Fim footer -->
+    </div>
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-
-
-
-
-
-
-    <script
-    src="https://code.jquery.com/jquery-3.4.0.js"
-    integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
-    crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="functions.js"></script>
-    <script>   
-            $(document).ready(function(){
-                
-            })
-    </script>
+<script src="index.js"></script>
 </body>
+
 </html>
